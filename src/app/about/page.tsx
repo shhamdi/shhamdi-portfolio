@@ -9,6 +9,9 @@ export default function AboutPage() {
   return (
     <section>
       <div className="pb-5">
+        <p className="pb-14 text-center font-lora text-4xl font-bold md:text-5xl">
+          Hello! 👋
+        </p>
         <h1 className="text-base font-bold text-secondary md:text-lg">About</h1>
         <h2 className="inline-block font-lora text-2xl font-bold text-foreground/90 md:text-4xl">
           Sameh Hamdi
@@ -17,9 +20,9 @@ export default function AboutPage() {
       <div className="flex flex-col items-center justify-between gap-5 sm:flex-row">
         <div>
           <p className="pb-2 text-base text-foreground/70 md:text-lg">
-            Hello! I{"'"}m Sameh, a self-taught front-end developer. My interest
-            in programming started since I was 14 years old but I started taking
-            it for serious and learning web development in 2022.
+            I{"'"}m Sameh, a self-taught front-end developer. My interest in
+            programming started since I was 14 years old but I started taking it
+            for serious and learning web development in 2022.
           </p>
 
           <p className="py-2 text-base text-foreground/70 md:text-lg ">
