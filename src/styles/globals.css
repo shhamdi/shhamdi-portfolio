@@ -22,4 +22,8 @@
     --accent: 240 1% 15%;
     --border: 0 0% 18%;
   }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
 }

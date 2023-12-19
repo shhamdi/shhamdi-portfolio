@@ -36,7 +36,7 @@ export default function RootLayout({
       className={`${inter.variable} ${lora.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-background text-foreground antialiased">
+      <body className="min-h-screen bg-background text-foreground antialiased selection:bg-primary/30">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
