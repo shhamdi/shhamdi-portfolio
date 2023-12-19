@@ -20,7 +20,7 @@ const ProjectCard = ({
   icons,
 }: ProjectCardProps) => {
   return (
-    <div className="rounded-md border border-border bg-background p-4 transition-transform duration-300 hover:scale-105 hover:shadow-sm">
+    <div className="rounded-md border border-foreground/20 bg-background p-4 transition-transform hover:scale-105 hover:shadow-sm">
       <Link href={href} className="group flex flex-col justify-between">
         <div className="space-y-3">
           <Reveal>
@@ -48,7 +48,7 @@ const ProjectCard = ({
         </div>
         <Reveal>
           <div className="flex items-center gap-1">
-            <p className="text-base font-bold decoration-secondary decoration-dotted underline-offset-4 transition-colors duration-300 group-hover:underline">
+            <p className="text-base font-bold decoration-secondary decoration-dotted underline-offset-4 transition-all duration-300 group-hover:text-primary group-hover:underline">
               See more
             </p>
             <Icons.rightArrow className="h-4 w-4" />

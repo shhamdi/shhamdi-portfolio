@@ -21,8 +21,8 @@ export default function AboutPage() {
         <div>
           <p className="pb-2 text-base text-foreground/70 md:text-lg">
             I{"'"}m Sameh, a self-taught front-end developer. My interest in
-            programming started since I was 14 years old but I started taking it
-            for serious and learning web development in 2022.
+            programming started when I was 14 years old, but I started learning
+            web development seriously in 2022.
           </p>
 
           <p className="py-2 text-base text-foreground/70 md:text-lg ">
@@ -32,9 +32,9 @@ export default function AboutPage() {
           </p>
 
           <p className="py-2 text-base text-foreground/70 md:text-lg">
-            Because I believe that sharing knowledge is the best way to improve
-            myself, I created this website to share my thoughts, the lessons I
-            {"'"}ve learned and showcase my projects. Please don
+            In my belief that sharing knowledge is a powerful tool for personal
+            growth, I{"'"}ve created this website to share my thoughts, the
+            lessons I{"'"}ve learned and showcase my projects. Please don
             {"'"}t hesitate to contact me and I{"'"}ll be very happy to help.
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
           contact me.
         </p>
         <p className="font-lora text-base font-bold text-foreground/90 md:text-lg">
-          find my mail in the footer.
+          find my email in the footer.
         </p>
       </div>
     </section>
