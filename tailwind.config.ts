@@ -30,6 +30,14 @@ const config: Config = {
         lora: ["var(--font-lora)"],
         playfair: ["var(--font-playfair)"],
       },
+      typography: {
+        quoteless: {
+          css: {
+            "blockquote p:first-of-type::before": { content: "none" },
+            "blockquote p:first-of-type::after": { content: "none" },
+          },
+        },
+      },
       cursor: {
         newtab: "url(../../public/new-tab.png) 10 10, pointer",
       },
@@ -49,6 +57,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 }
 export default config

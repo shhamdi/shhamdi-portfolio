@@ -67,10 +67,15 @@ const FixedNavBar = ({
                 : "",
               pathname.startsWith("/blog") && item.href === "/blog"
                 ? "text-primary-foreground hover:text-primary-foreground"
+                : "",
+              pathname.startsWith("/projects") && item.href === "/projects"
+                ? "text-primary-foreground hover:text-primary-foreground"
                 : ""
             )}
           >
-            {item.href === pathname && layoutId === "fixed" && (
+            {((item.href === pathname && layoutId === "fixed") ||
+              (pathname.startsWith("/projects") &&
+                item.href === "/projects")) && (
               <motion.span
                 layoutId={layoutId}
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}

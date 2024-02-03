@@ -24,13 +24,13 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal>
-            <h1 className="py-2 text-left font-lora text-5xl text-foreground/90 md:pb-6 md:pt-3 md:text-9xl">
+            <h1 className="py-2 text-left font-lora text-6xl text-foreground/90 md:pb-6 md:pt-3 md:text-9xl">
               <span className="font-bold">I{"'"}m a </span>
               <span className="font-extrabold">Front End Developer</span>
             </h1>
           </Reveal>
           <Reveal>
-            <p className="py-3 text-xl font-light md:text-2xl">
+            <p className="py-3 text-lg font-extralight md:text-2xl">
               I build websites with focus on responsive design and
               accessibility.
             </p>
@@ -57,7 +57,7 @@ export default function Home() {
               <div>
                 <Link
                   href="/about"
-                  className="inline-block rounded-full border-[3px] border-primary bg-transparent px-8 py-3 text-lg text-primary transition-colors duration-500 hover:bg-primary hover:text-primary-foreground"
+                  className="inline-block rounded-full border-[3px] border-primary bg-transparent px-6 py-2 text-lg text-primary transition-colors duration-500 hover:bg-primary hover:text-primary-foreground"
                 >
                   More about me
                 </Link>
@@ -76,7 +76,7 @@ export default function Home() {
             </h2>
           </Reveal>
           <Reveal>
-            <p className="mb-12 text-lg font-normal text-foreground/80 md:text-xl">
+            <p className="mb-12 text-base font-normal text-foreground/80 md:text-xl">
               Here are some of my most recent projects that I{"'"}m proud of
             </p>
           </Reveal>
@@ -85,7 +85,7 @@ export default function Home() {
             <ProjectCard
               title="Killer-B"
               description="A markdown-based note-taking app built using Next.js 13."
-              href="/projects/killer-b"
+              href="/projects/r/killer-b"
               imageProps={{
                 src: killerBScreenshot,
                 alt: "killer-b project screenshot",
@@ -97,7 +97,7 @@ export default function Home() {
               title="My Portfolio"
               description="My first version of my own portfolio built using Next.js
               and Framer Motion for animations."
-              href="/projects/my-portfolio"
+              href="/projects/r/my-portfolio"
               imageProps={{
                 src: myPortfolioScreenshot,
                 alt: "my portfolio project screenshot",

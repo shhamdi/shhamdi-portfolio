@@ -5,7 +5,7 @@ import myPortfolioScreenshot from "../../../public/portfolio-screenshot.png"
 
 export default function ProjectsPage() {
   return (
-    <section>
+    <section className="not-prose">
       <h1 className="pb-14 text-center font-lora text-4xl font-bold md:text-5xl">
         Projects
       </h1>
@@ -13,7 +13,7 @@ export default function ProjectsPage() {
         <ProjectCard
           title="Killer-B"
           description="A markdown-based note-taking app built using Next.js 13."
-          href="/projects/killer-b"
+          href="/projects/r/killer-b"
           imageProps={{
             src: killerBScreenshot,
             alt: "killer-b project screenshot",
@@ -26,7 +26,7 @@ export default function ProjectsPage() {
           title="My Portfolio"
           description="My first version of my own portfolio built using Next.js
               and Framer Motion for animations."
-          href="/projects/my-portfolio"
+          href="/projects/r/my-portfolio"
           imageProps={{
             src: myPortfolioScreenshot,
             alt: "my portfolio project screenshot",
