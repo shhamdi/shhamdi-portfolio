@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <>
-      <section className="space-y-6 pb-12 pt-12 md:pb-20 md:pt-36">
+      <section className="space-y-6 pb-12 pt-28 md:pb-20 md:pt-36">
         <div className="container max-w-[74rem] text-left">
           <div>
             <h1 className="mt-10 text-5xl font-semibold sm:text-7xl">
@@ -37,6 +37,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="h-[80vh] bg-muted">section</section>
     </>
   )
 }
