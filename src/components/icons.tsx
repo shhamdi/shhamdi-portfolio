@@ -3,6 +3,7 @@ import {
   Twitter,
   Linkedin,
   Menu,
+  ChevronRight,
   type Icon as LucideIcon,
 } from 'lucide-react'
 
@@ -13,4 +14,5 @@ export const Icons = {
   twitter: Twitter,
   linkedin: Linkedin,
   menu: Menu,
+  chevronRight: ChevronRight,
 }

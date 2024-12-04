@@ -18,14 +18,14 @@ export function Navbar({ items }: NavbarProps) {
   console.log('showMobileMenu: ', showMobileMenu)
   return (
     <>
-      <div className="fixed left-4 right-4 top-8 z-50 mx-auto h-auto rounded-lg border border-primary/10 bg-white/60 bg-clip-padding backdrop-blur-sm backdrop-filter sm:max-w-[20rem] md:max-w-[25rem]">
+      <div className="fixed left-4 right-4 top-8 z-50 mx-auto h-auto rounded-lg border border-foreground/30 bg-white/60 bg-clip-padding shadow-md backdrop-blur-sm backdrop-filter sm:max-w-[20rem] md:max-w-[25rem]">
         <nav className="hidden px-3 sm:flex sm:justify-between">
           {items.map((item, index) => (
             <Link
               key={index}
               href={item.href}
               className={cn(
-                'px-2 py-3 text-sm font-semibold transition-colors hover:text-foreground/80 md:text-base',
+                'px-2 py-3 text-sm font-semibold transition-colors hover:text-primary/80 md:text-base',
                 item.href === pathname ? 'text-primary' : 'text-foreground/60',
               )}
             >
@@ -41,10 +41,10 @@ export function Navbar({ items }: NavbarProps) {
                 className={cn(
                   item.href === pathname ? 'flex flex-col' : 'hidden',
                   'my-1 ml-1 w-full rounded-lg p-2',
-                  'border border-primary/10 bg-gray-50/70 bg-clip-padding backdrop-blur-sm backdrop-filter',
+                  'border border-foreground/20 bg-gray-50/70 bg-clip-padding backdrop-blur-sm backdrop-filter',
                 )}
               >
-                <div className="text-xl font-semibold text-primary">
+                <div className="text-xl font-semibold text-foreground">
                   {item.title}
                 </div>
                 <div className="text-xs font-normal text-muted-foreground">

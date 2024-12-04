@@ -38,7 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${wotfard.className} ${cardo.variable} antialiased`}>
+      <body
+        className={`${wotfard.className} ${cardo.variable} text-foreground antialiased`}
+      >
         {children}
       </body>
     </html>
