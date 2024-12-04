@@ -2,6 +2,7 @@ import {
   Github,
   Twitter,
   Linkedin,
+  Menu,
   type Icon as LucideIcon,
 } from 'lucide-react'
 
@@ -11,4 +12,5 @@ export const Icons = {
   github: Github,
   twitter: Twitter,
   linkedin: Linkedin,
+  menu: Menu,
 }
