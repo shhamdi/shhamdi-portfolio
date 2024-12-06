@@ -15,7 +15,7 @@ interface NavbarProps {
 export function Navbar({ items }: NavbarProps) {
   const pathname = usePathname()
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false)
-  console.log('showMobileMenu: ', showMobileMenu)
+
   return (
     <>
       <div className="fixed left-4 right-4 top-8 z-50 mx-auto h-auto rounded-lg border border-foreground/30 bg-white/60 bg-clip-padding shadow-md backdrop-blur-sm backdrop-filter sm:max-w-[20rem] md:max-w-[25rem]">

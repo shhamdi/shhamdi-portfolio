@@ -3,6 +3,7 @@ import { SocialMediaLink } from '@/components/social-media-link'
 import { buttonVariants } from '@/components/ui/button'
 import Link from 'next/link'
 import { cn } from '../../lib/utils'
+import { FeaturedPosts } from '@/components/featured-posts'
 
 export default function Home() {
   return (
@@ -47,9 +48,10 @@ export default function Home() {
       </header>
 
       <section className="mb-5 mt-24">
-        <h2 className="text-5xl font-semibold sm:text-6xl md:text-7xl">
+        <h2 className="mb-10 text-5xl font-semibold sm:text-6xl md:text-7xl">
           Featured <span className="text-primary">Posts</span>
         </h2>
+        <FeaturedPosts />
         <div className="mt-10 text-center">
           <Link href="/blog" className="text-lg font-medium hover:underline">
             See more posts {'>'}
