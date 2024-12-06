@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Cardo } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // const geistSans = localFont({
 //   src: './fonts/GeistVF.woff',
@@ -42,6 +43,7 @@ export default function RootLayout({
         className={`${wotfard.className} ${cardo.variable} text-foreground antialiased`}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
