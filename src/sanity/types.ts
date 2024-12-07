@@ -134,6 +134,7 @@ export type Post = {
     }
     hotspot?: SanityImageHotspot
     crop?: SanityImageCrop
+    alt?: string
     _type: 'image'
   }
   categories?: Array<{
@@ -288,6 +289,7 @@ export type POST_QUERYResult = {
     }
     hotspot?: SanityImageHotspot
     crop?: SanityImageCrop
+    alt?: string
     _type: 'image'
   } | null
 } | null
