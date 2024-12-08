@@ -1,30 +1,17 @@
 import type { Metadata } from 'next'
-import { Cardo } from 'next/font/google'
-import localFont from 'next/font/local'
+import { Domine, Nunito } from 'next/font/google'
 import './globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
-// const geistSans = localFont({
-//   src: './fonts/GeistVF.woff',
-//   variable: '--font-geist-sans',
-//   weight: '100 900',
-// })
-// const geistMono = localFont({
-//   src: './fonts/GeistMonoVF.woff',
-//   variable: '--font-geist-mono',
-//   weight: '100 900',
-// })
-
-const cardo = Cardo({
-  weight: '400',
-  style: 'normal',
+const domine = Domine({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-cardo',
+  variable: '--font-domine',
 })
 
-const wotfard = localFont({
-  src: './fonts/wotfard-regular-webfont.woff2',
+const nunito = Nunito({
+  subsets: ['latin'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -39,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${wotfard.className} ${cardo.variable} text-foreground antialiased`}
-      >
+      <body className={`${nunito.className} ${domine.variable} antialiased`}>
         {children}
         <SpeedInsights />
       </body>
