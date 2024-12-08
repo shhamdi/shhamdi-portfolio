@@ -7,17 +7,20 @@ import { FeaturedPosts } from '@/components/featured-posts'
 
 export default function Home() {
   return (
-    <main className="container max-w-[74rem]">
-      <header className="min-h-[90vh] space-y-6 pb-12 pt-28 md:pb-20 md:pt-36">
-        <div className="text-left">
+    <>
+      <header className="min-h-[70vh] space-y-6 bg-primary pb-12 pt-28 md:pb-20 md:pt-36">
+        <div className="container">
           <div>
-            <h1 className="mt-14 text-5xl font-semibold sm:text-6xl md:text-7xl">
-              <span className="block text-2xl sm:text-3xl md:text-4xl">
-                Hello 👋 I{"'"}m
+            <h1 className="mt-14 text-5xl font-bold text-primary sm:text-6xl md:text-7xl">
+              <span className="block text-xl sm:text-2xl md:text-3xl">
+                <span className="text-3xl text-highlight sm:text-4xl md:text-5xl">
+                  Hello👋
+                </span>{' '}
+                I{"'"}m
               </span>
               Sameh Hamdi
             </h1>
-            <p className="mt-4 text-sm text-muted-foreground sm:text-base md:text-lg">
+            <p className="text-muted-foreground mt-4 text-sm sm:text-base md:text-lg">
               I{"'"}m a fullstack developer. I work with React Ecosystem.
             </p>
           </div>
@@ -48,8 +51,8 @@ export default function Home() {
       </header>
 
       <section className="mb-5 mt-24">
-        <h2 className="mb-10 text-5xl font-semibold sm:text-6xl md:text-7xl">
-          Featured <span className="text-primary">Posts</span>
+        <h2 className="mb-10 text-5xl font-semibold text-primary sm:text-6xl md:text-7xl">
+          Featured <span className="text-highlight">Posts</span>
         </h2>
         <FeaturedPosts />
         <div className="mt-10 text-center">
@@ -60,8 +63,8 @@ export default function Home() {
       </section>
 
       <section className="mb-5 mt-24">
-        <h2 className="text-5xl font-semibold sm:text-6xl md:text-7xl">
-          Featured <span className="text-primary">Projects</span>
+        <h2 className="text-5xl font-semibold text-primary sm:text-6xl md:text-7xl">
+          Featured <span className="text-highlight">Projects</span>
         </h2>
         <div className="mt-10 text-center">
           <Link
@@ -72,6 +75,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-    </main>
+    </>
   )
 }
