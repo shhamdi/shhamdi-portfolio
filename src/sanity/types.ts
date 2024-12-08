@@ -96,6 +96,7 @@ export type BlockContent = Array<
       }
       hotspot?: SanityImageHotspot
       crop?: SanityImageCrop
+      alt?: string
       _type: 'image'
       _key: string
     }
@@ -269,15 +270,56 @@ export type AllSanitySchemaTypes =
 export declare const internalGroqTypeReferenceTo: unique symbol
 // Source: ../src/sanity/queries.ts
 // Variable: POSTS_QUERY
-// Query: *[_type == "post" && defined(slug.current)][0...12]{  _id, title, slug}
+// Query: *[_type == "post" && defined(slug.current)]|order(publishedAt desc)[0...12]{  _id,  title,  slug,  body,  mainImage,  publishedAt,  "categories": coalesce(    categories[]->{      _id,      slug,      title    },    []  ),  author->{    name,    image  }}
 export type POSTS_QUERYResult = Array<{
   _id: string
   title: string | null
   slug: Slug | null
+  body: BlockContent | null
+  mainImage: {
+    asset?: {
+      _ref: string
+      _type: 'reference'
+      _weak?: boolean
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+    }
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    alt?: string
+    _type: 'image'
+  } | null
+  publishedAt: string | null
+  categories:
+    | Array<{
+        _id: string
+        slug: null
+        title: string | null
+      }>
+    | Array<never>
+  author: {
+    name: string | null
+    image: {
+      asset?: {
+        _ref: string
+        _type: 'reference'
+        _weak?: boolean
+        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+      }
+      hotspot?: SanityImageHotspot
+      crop?: SanityImageCrop
+      _type: 'image'
+    } | null
+  } | null
+}>
+// Variable: POSTS_SLUGS_QUERY
+// Query: *[_type == "post" && defined(slug.current)]{   "slug": slug.current}
+export type POSTS_SLUGS_QUERYResult = Array<{
+  slug: string | null
 }>
 // Variable: POST_QUERY
-// Query: *[_type == "post" && slug.current == $slug][0]{  title, body, mainImage}
+// Query: *[_type == "post" && slug.current == $slug][0]{  _id,  title,  body,  mainImage,  publishedAt,  "categories": coalesce(    categories[]->{      _id,      slug,      title    },    []  ),  author->{    name,    image  }}
 export type POST_QUERYResult = {
+  _id: string
   title: string | null
   body: BlockContent | null
   mainImage: {
@@ -292,13 +334,36 @@ export type POST_QUERYResult = {
     alt?: string
     _type: 'image'
   } | null
+  publishedAt: string | null
+  categories:
+    | Array<{
+        _id: string
+        slug: null
+        title: string | null
+      }>
+    | Array<never>
+  author: {
+    name: string | null
+    image: {
+      asset?: {
+        _ref: string
+        _type: 'reference'
+        _weak?: boolean
+        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+      }
+      hotspot?: SanityImageHotspot
+      crop?: SanityImageCrop
+      _type: 'image'
+    } | null
+  } | null
 } | null
 
 // Query TypeMap
 import '@sanity/client'
 declare module '@sanity/client' {
   interface SanityQueries {
-    '*[_type == "post" && defined(slug.current)][0...12]{\n  _id, title, slug\n}': POSTS_QUERYResult
-    '*[_type == "post" && slug.current == $slug][0]{\n  title, body, mainImage\n}': POST_QUERYResult
+    '*[_type == "post" && defined(slug.current)]|order(publishedAt desc)[0...12]{\n  _id,\n  title,\n  slug,\n  body,\n  mainImage,\n  publishedAt,\n  "categories": coalesce(\n    categories[]->{\n      _id,\n      slug,\n      title\n    },\n    []\n  ),\n  author->{\n    name,\n    image\n  }\n}': POSTS_QUERYResult
+    '*[_type == "post" && defined(slug.current)]{ \n  "slug": slug.current\n}': POSTS_SLUGS_QUERYResult
+    '*[_type == "post" && slug.current == $slug][0]{\n  _id,\n  title,\n  body,\n  mainImage,\n  publishedAt,\n  "categories": coalesce(\n    categories[]->{\n      _id,\n      slug,\n      title\n    },\n    []\n  ),\n  author->{\n    name,\n    image\n  }\n}': POST_QUERYResult
   }
 }

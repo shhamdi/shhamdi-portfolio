@@ -1,8 +1,10 @@
-import { urlFor } from '@/sanity/image'
+// import { urlFor } from '@/sanity/image'
 import { sanityFetch } from '@/sanity/live'
 import { POST_QUERY } from '@/sanity/queries'
-import Image from 'next/image'
 import { notFound } from 'next/navigation'
+import { PortableText } from 'next-sanity'
+import { components } from '@/components/sanity-block-content-components'
+import { Author, Categories, PublishedAt } from '@/components/post'
 
 export default async function PostPage({
   params,
@@ -20,28 +22,36 @@ export default async function PostPage({
 
   return (
     <>
-      <header className="container mb-12 mt-28 md:mb-20 md:mt-44">
-        <h1 className="text-center font-cardo text-2xl font-medium sm:text-3xl md:text-5xl">
-          {post.title}
-        </h1>
-      </header>
-      <main className="container">
-        {post.mainImage ? (
+      <article className="container mt-36">
+        <header className="flex flex-col items-start gap-4 lg:col-span-12">
+          <div className="flex items-center gap-4">
+            <Categories categories={post.categories} />
+            <PublishedAt publishedAt={post.publishedAt} />
+          </div>
+          <h1 className="text-center font-cardo text-2xl font-medium sm:text-3xl md:text-5xl">
+            {post.title}
+          </h1>
+          <Author author={post.author} />
+        </header>
+        {/* {post.mainImage ? (
           <Image
-            className="aspect-[800/300] w-full"
             src={urlFor(post.mainImage)
               .width(800)
               .height(300)
-              .quality(80)
               .auto('format')
               .url()}
+            width={800}
+            height={300}
             alt={post.mainImage.alt as string}
-            width="800"
-            height="300"
-            priority={true}
+            className="container my-10 rounded-lg"
           />
+        ) : null} */}
+        {post.body ? (
+          <div className="container prose lg:prose-lg lg:col-span-7 lg:col-start-6">
+            <PortableText value={post.body} components={components} />
+          </div>
         ) : null}
-      </main>
+      </article>
     </>
   )
 }
