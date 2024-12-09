@@ -25,11 +25,19 @@ export default {
         secondary: 'hsl(var(--text-secondary))',
         highlight: 'hsl(var(--text-highlight))',
         buttonPrimary: 'hsl(var(--text-button-primary))',
+        buttonSecondary: 'hsl(var(--text-button-secondary))',
       },
       backgroundColor: {
         default: 'hsl(var(--background-default))',
         primary: 'hsl(var(--background-primary))',
         buttonPrimary: 'hsl(var(--button-background-primary))',
+      },
+      boxShadow: {
+        buttonPrimary: '0 0.5rem 0 hsl(var(--button-shadow-primary))',
+        buttonSecondary: '0 0.5rem 0 hsl(var(--button-shadow-secondary))',
+      },
+      borderColor: {
+        buttonSecondary: 'hsl(var(--button-border-secondary))',
       },
     },
   },

@@ -24,16 +24,12 @@ export default function Home() {
               I{"'"}m a fullstack developer. I work with React Ecosystem.
             </p>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 flex gap-4">
             <Link
               href="/about"
-              className={cn(
-                buttonVariants({ variant: 'default' }),
-                'text-xs sm:text-sm',
-                'py-5 shadow-md',
-              )}
+              className={cn(buttonVariants({ variant: 'default' }))}
             >
-              More About Me
+              More about me
             </Link>
           </div>
           <div className="mt-10 flex items-center justify-start gap-4">
