@@ -1,7 +1,19 @@
+import Link from 'next/link'
+
 const Footer = () => {
   return (
-    <footer className="container mt-10 py-6 text-center text-sm">
-      Made with <span className="text-red-600">♥️</span> by Sameh Hamdi
+    <footer className="container flex items-center justify-center bg-primary py-8 text-secondary">
+      <div className="flex gap-4">
+        <Link href="/" className="font-semibold hover:underline">
+          @shhamdi
+        </Link>
+        <Link href="/" className="font-semibold hover:underline">
+          github
+        </Link>
+        <Link href="/" className="font-semibold hover:underline">
+          linkedin
+        </Link>
+      </div>
     </footer>
   )
 }
