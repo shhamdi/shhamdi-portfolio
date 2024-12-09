@@ -1,27 +1,29 @@
 import { POSTS_QUERY } from '@/sanity/queries'
 import Link from 'next/link'
-import { Icons } from './icons'
 import { sanityFetch } from '@/sanity/live'
+import { PublishedAt } from './post'
 
-export const FeaturedPosts = async () => {
+export const LatestPosts = async () => {
   const { data: posts } = await sanityFetch({ query: POSTS_QUERY })
 
   return (
     <div>
-      <ul>
+      <ul className="divide-y divide-dashed divide-postsDivide">
         {posts.map((post) => (
-          <li key={post._id} className="w-fit pb-4">
+          <li
+            key={post._id}
+            className="py-7 [&:first-child]:pt-0 [&:last-child]:pb-0"
+          >
+            <PublishedAt publishedAt={post.publishedAt} />
             <Link
-              className="group hover:underline"
               href={`/blog/${post?.slug?.current}`}
+              className="font-crimsonPro text-2xl font-bold hover:underline"
             >
-              <div className="flex items-center">
-                <div>
-                  <Icons.chevronRight />
-                </div>
-                <div>{post.title}</div>
-              </div>
+              {post.title}
             </Link>
+            <p className="text-base text-secondary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
           </li>
         ))}
       </ul>

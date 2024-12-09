@@ -17,7 +17,6 @@ export default {
     },
     extend: {
       fontFamily: {
-        domine: 'var(--font-domine)',
         nunito: 'var(--font-nunito)',
         crimsonPro: 'var(--font-crimson-pro)',
       },
@@ -45,6 +44,9 @@ export default {
       },
       borderColor: {
         buttonSecondary: 'hsl(var(--button-border-secondary))',
+      },
+      divideColor: {
+        postsDivide: 'hsl(var(--posts-divide-color))',
       },
     },
   },

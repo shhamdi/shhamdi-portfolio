@@ -2,7 +2,7 @@ import { Icons } from '@/components/icons'
 import { buttonVariants } from '@/components/ui/button'
 import Link from 'next/link'
 import { cn } from '../../lib/utils'
-import { FeaturedPosts } from '@/components/featured-posts'
+import { LatestPosts } from '@/components/featured-posts'
 
 export default function Home() {
   return (
@@ -53,11 +53,11 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="container my-28 space-y-10">
+      <section className="container my-28 max-w-[65rem] space-y-10">
         <h2 className="text-3xl font-bold text-primary sm:text-4xl md:text-5xl">
-          Featured Posts
+          Latest Posts
         </h2>
-        <FeaturedPosts />
+        <LatestPosts />
         <div className="text-center">
           <Link
             href="/blog"
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container my-28 space-y-10">
+      <section className="container my-28 max-w-[65rem] space-y-10">
         <h2 className="text-3xl font-bold text-primary sm:text-4xl md:text-5xl">
           Featured Projects
         </h2>

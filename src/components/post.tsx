@@ -47,7 +47,7 @@ export const Categories = ({ categories }: CategoriesProps) => {
 
 export const PublishedAt = ({ publishedAt }: PublishedAtProps) => {
   return publishedAt ? (
-    <p className="text-base text-slate-700">
+    <p className="text-sm text-secondary">
       {dayjs(publishedAt).format('D MMMM YYYY')}
     </p>
   ) : null
