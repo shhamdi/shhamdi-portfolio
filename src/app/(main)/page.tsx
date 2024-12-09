@@ -1,5 +1,4 @@
 import { Icons } from '@/components/icons'
-import { SocialMediaLink } from '@/components/social-media-link'
 import { buttonVariants } from '@/components/ui/button'
 import Link from 'next/link'
 import { cn } from '../../lib/utils'
@@ -27,15 +26,24 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex items-center justify-center gap-4">
-            <SocialMediaLink href="" tooltipContent="GitHub">
-              <Icons.github strokeWidth={1} />
-            </SocialMediaLink>
-            <SocialMediaLink href="" tooltipContent="Twitter">
-              <Icons.twitter strokeWidth={1} />
-            </SocialMediaLink>
-            <SocialMediaLink href="" tooltipContent="Linkedin">
-              <Icons.linkedin strokeWidth={1} />
-            </SocialMediaLink>
+            <Link
+              href="/"
+              className={cn(buttonVariants({ variant: 'icon', size: 'icon' }))}
+            >
+              <Icons.github />
+            </Link>
+            <Link
+              href="/"
+              className={cn(buttonVariants({ variant: 'icon', size: 'icon' }))}
+            >
+              <Icons.twitter />
+            </Link>
+            <Link
+              href="/"
+              className={cn(buttonVariants({ variant: 'icon', size: 'icon' }))}
+            >
+              <Icons.linkedin />
+            </Link>
           </div>
         </div>
       </header>

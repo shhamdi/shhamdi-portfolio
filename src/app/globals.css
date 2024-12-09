@@ -17,10 +17,13 @@ body {
 
     --text-button-primary: 0 0% 100%;
     --text-button-secondary: 215 100% 21%;
+    --text-button-icon: 40 100% 13.5%;
     --button-background-primary: 185 97% 28%;
     --button-shadow-primary: 185 98% 20%;
     --button-shadow-secondary: 215 100% 21%;
+    --button-shadow-icon: 40 100% 13.5%;
     --button-border-secondary: 215 100% 21%;
+    --button-icon-background: 39.8 78.8% 70.4%;
   }
 }
 

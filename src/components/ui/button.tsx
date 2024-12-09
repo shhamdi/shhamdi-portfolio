@@ -13,9 +13,11 @@ const buttonVariants = cva(
           'bg-buttonPrimary text-buttonPrimary hover:-translate-y-2 hover:shadow-buttonPrimary',
         secondary:
           'bg-primary text-buttonSecondary border-2 border-buttonSecondary hover:-translate-y-2 hover:shadow-buttonSecondary',
+        icon: 'bg-buttonIcon text-buttonIcon hover:-translate-y-2 hover:shadow-buttonIcon',
       },
       size: {
         default: 'h-12 px-5 py-2',
+        icon: 'h-12 w-12',
       },
     },
     defaultVariants: {

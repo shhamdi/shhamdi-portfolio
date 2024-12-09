@@ -30,15 +30,18 @@ export default {
         secondary: 'hsl(var(--text-secondary))',
         buttonPrimary: 'hsl(var(--text-button-primary))',
         buttonSecondary: 'hsl(var(--text-button-secondary))',
+        buttonIcon: 'hsl(var(--text-button-icon))',
       },
       backgroundColor: {
         default: 'hsl(var(--background-default))',
         primary: 'hsl(var(--background-primary))',
         buttonPrimary: 'hsl(var(--button-background-primary))',
+        buttonIcon: 'hsl(var(--button-icon-background))',
       },
       boxShadow: {
         buttonPrimary: '0 0.5rem 0 hsl(var(--button-shadow-primary))',
         buttonSecondary: '0 0.5rem 0 hsl(var(--button-shadow-secondary))',
+        buttonIcon: '0 0.5rem 0 hsl(var(--button-shadow-icon))',
       },
       borderColor: {
         buttonSecondary: 'hsl(var(--button-border-secondary))',
