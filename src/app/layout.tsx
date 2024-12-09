@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
-import { Domine, Nunito } from 'next/font/google'
+import { Nunito, Crimson_Pro } from 'next/font/google'
 import './globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
-const domine = Domine({
+const crimson_pro = Crimson_Pro({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-domine',
+  variable: '--font-crimson-pro',
 })
 
 const nunito = Nunito({
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-nunito',
 })
 
 export const metadata: Metadata = {
@@ -26,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} ${domine.variable} antialiased`}>
+      <body
+        className={`${nunito.className} ${nunito.variable} ${crimson_pro.variable} antialiased`}
+      >
         {children}
         <SpeedInsights />
       </body>

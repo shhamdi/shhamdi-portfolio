@@ -18,12 +18,16 @@ export default {
     extend: {
       fontFamily: {
         domine: 'var(--font-domine)',
+        nunito: 'var(--font-nunito)',
+        crimsonPro: 'var(--font-crimson-pro)',
+      },
+      colors: {
+        highlight: 'hsl(var(--color-highlight))',
       },
       textColor: {
         normal: 'hsl(var(--text-normal))',
         primary: 'hsl(var(--text-primary))',
         secondary: 'hsl(var(--text-secondary))',
-        highlight: 'hsl(var(--text-highlight))',
         buttonPrimary: 'hsl(var(--text-button-primary))',
         buttonSecondary: 'hsl(var(--text-button-secondary))',
       },

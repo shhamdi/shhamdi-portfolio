@@ -8,12 +8,12 @@ body {
 
 @layer base {
   :root {
+    --color-highlight: 0 100% 62%;
     --background-default: 0 0% 100%;
     --background-primary: 50 25% 95%;
     --text-normal: 190 10% 12%;
     --text-primary: 215 100% 21%;
     --text-secondary: 180 1% 51%;
-    --text-highlight: 0 100% 62%;
 
     --text-button-primary: 0 0% 100%;
     --text-button-secondary: 215 100% 21%;
@@ -34,6 +34,6 @@ body {
   h4,
   h5,
   h6 {
-    @apply font-domine;
+    @apply font-crimsonPro;
   }
 }
