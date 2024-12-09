@@ -1,5 +1,4 @@
 import { Icons } from '@/components/icons'
-import { SocialMediaLink } from '@/components/social-media-link'
 import { buttonVariants } from '@/components/ui/button'
 import Link from 'next/link'
 import { cn } from '../../lib/utils'
@@ -7,49 +6,51 @@ import { FeaturedPosts } from '@/components/featured-posts'
 
 export default function Home() {
   return (
-    <main className="container max-w-[74rem]">
-      <header className="min-h-[90vh] space-y-6 pb-12 pt-28 md:pb-20 md:pt-36">
-        <div className="text-left">
-          <div>
-            <h1 className="mt-14 text-5xl font-semibold sm:text-6xl md:text-7xl">
-              <span className="block text-2xl sm:text-3xl md:text-4xl">
-                Hello 👋 I{"'"}m
-              </span>
-              Sameh Hamdi
+    <>
+      <header className="flex min-h-[100vh] items-center justify-center bg-primary">
+        <div className="flex flex-col justify-center gap-7">
+          <div className="text-center">
+            <h1 className="text-6xl font-bold tracking-wide">
+              Hi, I{"'"}m Sameh!
             </h1>
-            <p className="mt-4 text-sm text-muted-foreground sm:text-base md:text-lg">
+            <p className="mt-4 text-sm text-secondary sm:text-base md:text-lg">
               I{"'"}m a fullstack developer. I work with React Ecosystem.
             </p>
           </div>
-          <div className="mt-10">
+          <div className="flex justify-center">
             <Link
               href="/about"
-              className={cn(
-                buttonVariants({ variant: 'default' }),
-                'text-xs sm:text-sm',
-                'py-5 shadow-md',
-              )}
+              className={cn(buttonVariants({ variant: 'default' }))}
             >
-              More About Me
+              More about me
             </Link>
           </div>
-          <div className="mt-10 flex items-center justify-start gap-4">
-            <SocialMediaLink href="" tooltipContent="GitHub">
-              <Icons.github strokeWidth={1} />
-            </SocialMediaLink>
-            <SocialMediaLink href="" tooltipContent="Twitter">
-              <Icons.twitter strokeWidth={1} />
-            </SocialMediaLink>
-            <SocialMediaLink href="" tooltipContent="Linkedin">
-              <Icons.linkedin strokeWidth={1} />
-            </SocialMediaLink>
+          <div className="flex items-center justify-center gap-4">
+            <Link
+              href="/"
+              className={cn(buttonVariants({ variant: 'icon', size: 'icon' }))}
+            >
+              <Icons.github />
+            </Link>
+            <Link
+              href="/"
+              className={cn(buttonVariants({ variant: 'icon', size: 'icon' }))}
+            >
+              <Icons.twitter />
+            </Link>
+            <Link
+              href="/"
+              className={cn(buttonVariants({ variant: 'icon', size: 'icon' }))}
+            >
+              <Icons.linkedin />
+            </Link>
           </div>
         </div>
       </header>
 
       <section className="mb-5 mt-24">
-        <h2 className="mb-10 text-5xl font-semibold sm:text-6xl md:text-7xl">
-          Featured <span className="text-primary">Posts</span>
+        <h2 className="mb-10 text-5xl font-semibold text-primary sm:text-6xl md:text-7xl">
+          Featured <span className="text-highlight">Posts</span>
         </h2>
         <FeaturedPosts />
         <div className="mt-10 text-center">
@@ -60,8 +61,8 @@ export default function Home() {
       </section>
 
       <section className="mb-5 mt-24">
-        <h2 className="text-5xl font-semibold sm:text-6xl md:text-7xl">
-          Featured <span className="text-primary">Projects</span>
+        <h2 className="text-5xl font-semibold text-primary sm:text-6xl md:text-7xl">
+          Featured <span className="text-highlight">Projects</span>
         </h2>
         <div className="mt-10 text-center">
           <Link
@@ -72,6 +73,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-    </main>
+    </>
   )
 }

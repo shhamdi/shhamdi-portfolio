@@ -17,54 +17,34 @@ export default {
     },
     extend: {
       fontFamily: {
-        cardo: ['var(--font-cardo)'],
+        domine: 'var(--font-domine)',
+        nunito: 'var(--font-nunito)',
+        crimsonPro: 'var(--font-crimson-pro)',
       },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))',
-        },
+        highlight: 'hsl(var(--color-highlight))',
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+      textColor: {
+        normal: 'hsl(var(--text-normal))',
+        primary: 'hsl(var(--text-primary))',
+        secondary: 'hsl(var(--text-secondary))',
+        buttonPrimary: 'hsl(var(--text-button-primary))',
+        buttonSecondary: 'hsl(var(--text-button-secondary))',
+        buttonIcon: 'hsl(var(--text-button-icon))',
+      },
+      backgroundColor: {
+        default: 'hsl(var(--background-default))',
+        primary: 'hsl(var(--background-primary))',
+        buttonPrimary: 'hsl(var(--button-background-primary))',
+        buttonIcon: 'hsl(var(--button-icon-background))',
+      },
+      boxShadow: {
+        buttonPrimary: '0 0.5rem 0 hsl(var(--button-shadow-primary))',
+        buttonSecondary: '0 0.5rem 0 hsl(var(--button-shadow-secondary))',
+        buttonIcon: '0 0.5rem 0 hsl(var(--button-shadow-icon))',
+      },
+      borderColor: {
+        buttonSecondary: 'hsl(var(--button-border-secondary))',
       },
     },
   },
